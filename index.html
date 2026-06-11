@@ -9,20 +9,16 @@
 <meta property="og:description" content="Ganzheitliche Osteopathie & Coaching mit Zeit für Sie — mitten in der Lüneburger Altstadt.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/hero-behandlung.jpg">
+<link rel="canonical" href="https://www.brandt-osteopathie.de/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232e3328'/%3E%3Ctext x='32' y='43' font-family='Georgia' font-size='30' fill='%23f7f3ec' text-anchor='middle' font-style='italic'%3Eeb%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Praxis Elisa Brandt — Osteopathie & Coaching",
   "description": "Osteopathie, Craniosacrale Therapie und systemisches Coaching in Lüneburg.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Auf dem Meere 12",
-    "addressLocality": "Lüneburg",
-    "postalCode": "21335",
-    "addressCountry": "DE"
-  },
+  "address": { "@type": "PostalAddress", "streetAddress": "Auf dem Meere 12", "addressLocality": "Lüneburg", "postalCode": "21335", "addressCountry": "DE" },
   "telephone": "+49 4131 604812",
   "email": "praxis@brandt-osteopathie.de",
   "url": "https://www.brandt-osteopathie.de",
@@ -31,357 +27,32 @@
   "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "63" }
 }
 </script>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
-
-:root {
-  --creme: #f7f3ec;
-  --creme2: #efe8db;
-  --sage: #7a8b6f;
-  --sage-soft: #aebaa4;
-  --green: #2e3328;
-  --green2: #3d4435;
-  --ink: #2b2b26;
-  --muted: #6f6d63;
-  --line: rgba(46, 51, 40, .14);
-  --serif: 'Cormorant Garamond', Georgia, serif;
-  --sans: 'Inter', -apple-system, sans-serif;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: auto; }
-body {
-  background: var(--creme);
-  color: var(--ink);
-  font-family: var(--sans);
-  font-weight: 400;
-  line-height: 1.65;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-.wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-
-::selection { background: var(--sage); color: var(--creme); }
-
-h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.12; color: var(--green); }
-.eyebrow {
-  font-family: var(--sans); font-size: 11px; letter-spacing: .32em; text-transform: uppercase;
-  color: var(--sage); font-weight: 600; display: inline-flex; align-items: center; gap: 12px;
-  margin-bottom: 18px;
-}
-.eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--sage); }
-.it { font-style: italic; color: var(--sage); }
-
-.rv { opacity: 0; transform: translateY(48px); }
-
-/* ============ NAV ============ */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 900;
-  background: rgba(247, 243, 236, .88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
-  will-change: transform;
-}
-.nav-inner { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.brand { display: flex; align-items: baseline; gap: 10px; font-family: var(--serif); font-size: 22px; color: var(--green); }
-.brand strong { font-weight: 600; }
-.brand span.sub { font-family: var(--sans); font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: var(--sage); font-weight: 600; }
-.nav-links { display: flex; gap: 32px; font-size: 13.5px; font-weight: 500; color: var(--green2); }
-.nav-links a { position: relative; padding: 4px 0; }
-.nav-links a::after { content: ''; position: absolute; left: 0; bottom: 0; height: 1px; width: 0; background: var(--sage); transition: width .35s cubic-bezier(.22,1,.36,1); }
-.nav-links a:hover::after { width: 100%; }
-
-.btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: var(--green); color: var(--creme);
-  font-family: var(--sans); font-size: 13.5px; font-weight: 500; letter-spacing: .02em;
-  padding: 14px 28px; border-radius: 999px; border: 1px solid var(--green);
-  cursor: pointer; transition: background .35s, color .35s, border-color .35s;
-  will-change: transform;
-}
-.btn:hover { background: var(--sage); border-color: var(--sage); }
-.btn.ghost { background: transparent; color: var(--green); }
-.btn.ghost:hover { background: var(--green); color: var(--creme); }
-.btn svg { transition: transform .35s; }
-.btn:hover svg { transform: translateX(4px); }
-.nav-cta { padding: 11px 22px; font-size: 13px; }
-
-.burger { display: none; background: none; border: 0; cursor: pointer; padding: 6px; }
-.burger span { display: block; width: 24px; height: 2px; background: var(--green); margin: 5px 0; transition: .3s; }
-
-/* ============ HERO ============ */
-.hero { min-height: 100svh; display: flex; align-items: center; padding: 140px 0 80px; position: relative; overflow: hidden; }
-.hero-bgword {
-  position: absolute; right: -2%; bottom: -4%; font-family: var(--serif); font-style: italic;
-  font-size: clamp(120px, 22vw, 320px); color: rgba(122, 139, 111, .07); pointer-events: none; line-height: 1;
-  white-space: nowrap;
-}
-.hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(40px, 6vw, 90px); align-items: center; }
-.hero h1 { font-size: clamp(44px, 6vw, 84px); margin: 0 0 26px; }
-.hero h1 .wline { display: block; }
-.hero-sub { font-size: 17px; color: var(--muted); max-width: 480px; margin-bottom: 38px; font-weight: 300; }
-.hero-sub strong { color: var(--green); font-weight: 500; }
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-bottom: 42px; }
-.gbadge { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--muted); }
-.gbadge .stars { color: #d9a441; letter-spacing: 2px; font-size: 15px; }
-.gbadge b { color: var(--green); font-weight: 600; }
-
-.hero-visual { position: relative; }
-.arch {
-  position: relative; overflow: hidden;
-  border-radius: 999px 999px 24px 24px;
-  aspect-ratio: 4 / 5.1;
-  box-shadow: 0 40px 80px -30px rgba(46, 51, 40, .35);
-}
-.arch img { width: 100%; height: 118%; object-fit: cover; will-change: transform; }
-.hero-card {
-  position: absolute; left: -34px; bottom: 38px; background: var(--creme);
-  border: 1px solid var(--line); border-radius: 18px; padding: 18px 22px;
-  display: flex; gap: 14px; align-items: center; box-shadow: 0 24px 50px -20px rgba(46,51,40,.3);
-}
-.hero-card .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--sage); box-shadow: 0 0 0 5px rgba(122,139,111,.18); }
-.hero-card b { display: block; font-size: 13.5px; color: var(--green); font-weight: 600; }
-.hero-card small { font-size: 12px; color: var(--muted); }
-
-/* ============ MARQUEE ============ */
-.band { background: var(--green); color: var(--creme2); padding: 22px 0; overflow: hidden; white-space: nowrap; }
-.marquee-track { display: inline-flex; gap: 56px; align-items: center; font-family: var(--serif); font-size: 21px; font-style: italic; }
-.marquee-track .sep { width: 7px; height: 7px; border-radius: 50%; background: var(--sage-soft); flex-shrink: 0; }
-
-/* ============ SECTIONS BASE ============ */
-section { padding: clamp(80px, 10vw, 130px) 0; }
-.sec-head { max-width: 640px; margin-bottom: clamp(44px, 6vw, 70px); }
-.sec-head h2 { font-size: clamp(34px, 4.2vw, 56px); }
-.sec-head p { color: var(--muted); margin-top: 16px; font-weight: 300; }
-
-/* ============ INTRO + COUNTER ============ */
-.intro { padding-bottom: 40px; }
-.intro-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(40px, 6vw, 100px); align-items: end; }
-.intro h2 { font-size: clamp(30px, 3.6vw, 48px); }
-.counters { display: flex; gap: clamp(28px, 4vw, 56px); margin-top: 26px; }
-.counter-item .num { font-family: var(--serif); font-size: clamp(40px, 4.5vw, 62px); color: var(--green); line-height: 1; }
-.counter-item .num sup { font-size: .5em; color: var(--sage); }
-.counter-item small { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); display: block; margin-top: 8px; }
-
-/* ============ SCHWERPUNKTE (horizontal) ============ */
-.focus-section { overflow: hidden; background: var(--creme2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.focus-head { display: flex; justify-content: space-between; align-items: end; gap: 30px; }
-.focus-hint { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 10px; }
-#cards-track { display: flex; gap: 22px; padding-top: 56px; width: max-content; will-change: transform; }
-.fcard {
-  flex-shrink: 0; width: 330px; background: var(--creme); border: 1px solid var(--line);
-  border-radius: 20px; padding: 34px 30px 38px; position: relative; overflow: hidden;
-  transition: border-color .35s;
-}
-.fcard:hover { border-color: var(--sage); }
-.fcard .idx { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--sage); }
-.fcard h3 { font-size: 26px; margin: 14px 0 12px; }
-.fcard p { font-size: 14px; color: var(--muted); font-weight: 300; }
-.fcard .ico { width: 46px; height: 46px; border-radius: 50%; background: rgba(122,139,111,.14); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
-.fcard .ico svg { stroke: var(--sage); }
-
-/* ============ ÜBER MICH ============ */
-.about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(40px, 7vw, 110px); align-items: center; }
-.about-img { position: relative; overflow: hidden; border-radius: 24px 24px 999px 999px; aspect-ratio: 4/5; }
-.about-img img { width: 100%; height: 100%; object-fit: cover; }
-.img-cover { position: absolute; inset: 0; background: var(--creme); transform-origin: right; will-change: transform; }
-.about-body h2 { font-size: clamp(32px, 4vw, 52px); margin-bottom: 22px; }
-.about-body > p { color: var(--muted); font-weight: 300; margin-bottom: 16px; }
-.quals { margin: 28px 0 34px; display: grid; gap: 13px; }
-.quals li { list-style: none; display: flex; gap: 14px; align-items: baseline; font-size: 14.5px; color: var(--green2); }
-.quals li::before { content: '—'; color: var(--sage); flex-shrink: 0; }
-.sig { font-family: var(--serif); font-style: italic; font-size: 26px; color: var(--sage); }
-
-/* ============ ABLAUF ============ */
-.steps-section { background: var(--green); color: var(--creme2); }
-.steps-section h2, .steps-section h3 { color: var(--creme); }
-.steps-section .eyebrow { color: var(--sage-soft); }
-.steps-section .eyebrow::before { background: var(--sage-soft); }
-.steps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 90px); align-items: center; }
-.steps { display: grid; gap: 0; }
-.step { display: flex; gap: 26px; padding: 28px 0; border-bottom: 1px solid rgba(247,243,236,.12); }
-.step:last-child { border-bottom: 0; }
-.step .n { font-family: var(--serif); font-style: italic; font-size: 30px; color: var(--sage-soft); line-height: 1.2; }
-.step h3 { font-size: 23px; margin-bottom: 8px; }
-.step p { font-size: 14.5px; color: rgba(247,243,236,.7); font-weight: 300; }
-.steps-img { overflow: hidden; border-radius: 20px; aspect-ratio: 4/4.6; position: relative; }
-.steps-img img { width: 100%; height: 116%; object-fit: cover; will-change: transform; }
-
-/* ============ PRAXIS GALERIE ============ */
-.gallery-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 20px; }
-.g-item { overflow: hidden; border-radius: 20px; position: relative; }
-.g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.22,1,.36,1); }
-.g-item:hover img { transform: scale(1.05); }
-.g-item.tall { grid-row: span 2; aspect-ratio: 3/4.4; }
-.g-item:not(.tall) { aspect-ratio: 4/2.62; }
-
-/* ============ PREISE ============ */
-.price-section { background: var(--creme2); border-top: 1px solid var(--line); }
-.price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.pcard { background: var(--creme); border: 1px solid var(--line); border-radius: 22px; padding: 38px 34px; display: flex; flex-direction: column; transition: border-color .35s, transform .35s; }
-.pcard:hover { border-color: var(--sage); transform: translateY(-6px); }
-.pcard h3 { font-size: 25px; }
-.pcard .dur { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--sage); margin: 8px 0 20px; font-weight: 600; }
-.pcard .price { font-family: var(--serif); font-size: 48px; color: var(--green); line-height: 1; margin-bottom: 20px; }
-.pcard .price small { font-size: 16px; font-family: var(--sans); color: var(--muted); font-weight: 300; }
-.pcard p { font-size: 14px; color: var(--muted); font-weight: 300; flex: 1; }
-.pcard .btn { margin-top: 26px; justify-content: center; }
-.kasse-note { text-align: center; margin-top: 36px; font-size: 13.5px; color: var(--muted); }
-.kasse-note b { color: var(--green); }
-
-/* ============ STIMMEN ============ */
-.review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.rcard { background: var(--creme2); border: 1px solid var(--line); border-radius: 22px; padding: 34px 30px; }
-.rcard .stars { color: #d9a441; letter-spacing: 3px; margin-bottom: 16px; }
-.rcard p { font-family: var(--serif); font-size: 19px; font-style: italic; color: var(--green2); line-height: 1.5; margin-bottom: 22px; }
-.rcard .who { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--muted); }
-.rcard .who .av { width: 38px; height: 38px; border-radius: 50%; background: var(--sage); color: var(--creme); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px; }
-.rcard .who b { color: var(--green); display: block; font-weight: 600; }
-.gline { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 40px; font-size: 13px; color: var(--muted); }
-
-/* ============ FAQ ============ */
-.faq-wrap { max-width: 760px; margin: 0 auto; }
-.faq { border-bottom: 1px solid var(--line); }
-.faq summary {
-  cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
-  padding: 26px 0; font-family: var(--serif); font-size: 23px; color: var(--green); gap: 20px;
-}
-.faq summary::-webkit-details-marker { display: none; }
-.faq summary .pl { width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--sage); color: var(--sage); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; transition: transform .35s, background .35s, color .35s; font-family: var(--sans); font-weight: 300; }
-.faq[open] summary .pl { transform: rotate(45deg); background: var(--sage); color: var(--creme); }
-.faq .faq-body { padding: 0 40px 26px 0; color: var(--muted); font-size: 15px; font-weight: 300; }
-
-/* ============ KONTAKT ============ */
-.contact-section { background: var(--green); color: var(--creme2); }
-.contact-section h2 { color: var(--creme); font-size: clamp(34px, 4.2vw, 56px); }
-.contact-section .eyebrow { color: var(--sage-soft); }
-.contact-section .eyebrow::before { background: var(--sage-soft); }
-.contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(40px, 6vw, 90px); }
-.cinfo { display: grid; gap: 26px; margin-top: 34px; align-content: start; }
-.cinfo .ci { display: flex; gap: 18px; align-items: flex-start; }
-.cinfo .ci svg { stroke: var(--sage-soft); flex-shrink: 0; margin-top: 3px; }
-.cinfo .ci b { display: block; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--sage-soft); margin-bottom: 4px; font-weight: 600; }
-.cinfo .ci a, .cinfo .ci span { font-size: 16px; color: var(--creme); font-weight: 300; }
-.cinfo .ci a:hover { color: var(--sage-soft); }
-.hours { font-size: 14.5px; color: rgba(247,243,236,.75); display: grid; gap: 4px; font-weight: 300; }
-.hours div { display: flex; justify-content: space-between; gap: 24px; max-width: 280px; }
-
-form { display: grid; gap: 16px; background: rgba(247,243,236,.05); border: 1px solid rgba(247,243,236,.14); border-radius: 24px; padding: clamp(28px, 4vw, 44px); }
-.frow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-label { font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--sage-soft); font-weight: 600; display: grid; gap: 8px; }
-input, select, textarea {
-  width: 100%; background: rgba(247,243,236,.07); border: 1px solid rgba(247,243,236,.18);
-  border-radius: 12px; padding: 14px 16px; color: var(--creme); font-family: var(--sans);
-  font-size: 15px; font-weight: 300; outline: none; transition: border-color .3s;
-}
-input:focus, select:focus, textarea:focus { border-color: var(--sage-soft); }
-select option { color: var(--ink); }
-textarea { resize: vertical; min-height: 110px; }
-form .btn { background: var(--creme); color: var(--green); border-color: var(--creme); justify-content: center; }
-form .btn:hover { background: var(--sage-soft); border-color: var(--sage-soft); }
-.privacy-hint { font-size: 12px; color: rgba(247,243,236,.55); font-weight: 300; }
-.privacy-hint a { text-decoration: underline; }
-
-/* ============ MAPS ============ */
-.map-section { padding: 0; }
-.map-section iframe { width: 100%; height: 440px; border: 0; display: block; filter: saturate(.65) contrast(1.02); }
-
-/* ============ FOOTER ============ */
-footer { background: var(--green); color: rgba(247,243,236,.7); border-top: 1px solid rgba(247,243,236,.1); padding: 50px 0; }
-.foot-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; font-size: 13px; font-weight: 300; }
-.foot-links { display: flex; gap: 26px; }
-.foot-links button { background: none; border: 0; color: rgba(247,243,236,.7); font-size: 13px; cursor: pointer; font-family: var(--sans); font-weight: 300; padding: 0; }
-.foot-links button:hover { color: var(--creme); }
-.foot-credit a { color: var(--sage-soft); font-weight: 500; }
-
-/* ============ FIXED ELEMENTS ============ */
-.wa-fab {
-  position: fixed; right: 22px; bottom: 22px; z-index: 950;
-  width: 58px; height: 58px; border-radius: 50%; background: #25d366;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 14px 32px -8px rgba(37, 211, 102, .55);
-  animation: wa-pulse 2.6s infinite;
-}
-@keyframes wa-pulse {
-  0% { box-shadow: 0 14px 32px -8px rgba(37,211,102,.55), 0 0 0 0 rgba(37,211,102,.4); }
-  70% { box-shadow: 0 14px 32px -8px rgba(37,211,102,.55), 0 0 0 16px rgba(37,211,102,0); }
-  100% { box-shadow: 0 14px 32px -8px rgba(37,211,102,.55), 0 0 0 0 rgba(37,211,102,0); }
-}
-
-.cookie {
-  position: fixed; left: 22px; bottom: 22px; z-index: 960; max-width: 340px;
-  background: var(--green); color: var(--creme2); border-radius: 16px; padding: 20px 22px;
-  font-size: 13px; font-weight: 300; box-shadow: 0 24px 50px -16px rgba(0,0,0,.4);
-  display: none;
-}
-.cookie.show { display: block; }
-.cookie button { margin-top: 14px; background: var(--creme); color: var(--green); border: 0; border-radius: 999px; padding: 9px 22px; font-size: 12.5px; font-weight: 600; cursor: pointer; }
-
-.drawer-overlay { position: fixed; inset: 0; z-index: 970; background: rgba(43,43,38,.5); opacity: 0; pointer-events: none; transition: opacity .4s; }
-.drawer-overlay.open { opacity: 1; pointer-events: auto; }
-.drawer {
-  position: fixed; top: 0; right: 0; bottom: 0; z-index: 980; width: min(560px, 94vw);
-  background: var(--creme); transform: translateX(102%); transition: transform .55s cubic-bezier(.22,1,.36,1);
-  overflow-y: auto; padding: 70px clamp(26px, 5vw, 54px) 60px;
-}
-.drawer.open { transform: translateX(0); }
-.drawer h2 { font-size: 34px; margin-bottom: 24px; }
-.drawer h3 { font-size: 20px; margin: 26px 0 8px; }
-.drawer p { font-size: 14px; color: var(--muted); font-weight: 300; margin-bottom: 10px; }
-.drawer-close { position: absolute; top: 22px; right: 24px; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); background: none; font-size: 20px; color: var(--green); cursor: pointer; }
-.drawer-close:hover { background: var(--green); color: var(--creme); border-color: var(--green); }
-
-/* ============ MOBILE ============ */
-@media (max-width: 980px) {
-  .nav-links, .nav-cta { display: none; }
-  .burger { display: block; }
-  .mobile-menu { position: fixed; inset: 0; z-index: 890; background: var(--creme); display: none; flex-direction: column; justify-content: center; align-items: center; gap: 30px; font-family: var(--serif); font-size: 30px; color: var(--green); }
-  .mobile-menu.open { display: flex; }
-  .hero { padding-top: 120px; }
-  .hero-grid, .intro-grid, .about-grid, .steps-grid, .contact-grid { grid-template-columns: 1fr; }
-  .hero-visual { max-width: 460px; }
-  .hero-card { left: 10px; }
-  .price-grid, .review-grid { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: 1fr 1fr; }
-  .g-item.tall { grid-column: span 2; aspect-ratio: 4/3; grid-row: auto; }
-  #cards-track { width: auto; flex-direction: column; padding-top: 40px; }
-  .fcard { width: 100%; }
-  .frow { grid-template-columns: 1fr; }
-  .counters { flex-wrap: wrap; }
-}
-@media (max-width: 520px) {
-  .brand { font-size: 19px; }
-  .brand span.sub { display: none; }
-}
-</style>
 </head>
 <body>
 
-<nav id="nav">
+<nav>
   <div class="nav-inner">
-    <a href="#top" class="brand"><strong>Elisa Brandt</strong> <span class="sub">Osteopathie · Coaching</span></a>
+    <a href="index.html" class="brand"><strong>Elisa Brandt</strong> <span class="sub">Osteopathie · Coaching</span></a>
     <div class="nav-links">
-      <a href="#schwerpunkte">Schwerpunkte</a>
-      <a href="#ueber">Über mich</a>
-      <a href="#ablauf">Ablauf</a>
-      <a href="#preise">Preise</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="osteopathie.html">Osteopathie</a>
+      <a href="coaching.html">Coaching</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="preise.html">Preise</a>
+      <a href="kontakt.html">Kontakt</a>
     </div>
-    <a href="#kontakt" class="btn nav-cta magnetic">Termin vereinbaren</a>
+    <a href="kontakt.html" class="btn nav-cta magnetic">Termin vereinbaren</a>
     <button class="burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
   </div>
 </nav>
-
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#schwerpunkte">Schwerpunkte</a>
-  <a href="#ueber">Über mich</a>
-  <a href="#ablauf">Ablauf</a>
-  <a href="#preise">Preise</a>
-  <a href="#kontakt">Kontakt</a>
+  <a href="osteopathie.html">Osteopathie</a>
+  <a href="coaching.html">Coaching</a>
+  <a href="ueber-mich.html">Über mich</a>
+  <a href="preise.html">Preise</a>
+  <a href="kontakt.html">Kontakt</a>
 </div>
 
-<header class="hero" id="top">
+<header class="hero">
   <div class="hero-bgword">balance</div>
   <div class="wrap hero-grid">
     <div>
@@ -389,7 +60,7 @@ footer { background: var(--green); color: rgba(247,243,236,.7); border-top: 1px 
       <h1 class="hero-title"><span class="wline">Ihr Körper weiß</span><span class="wline"><em class="it">den Weg.</em></span></h1>
       <p class="hero-sub">Ganzheitliche <strong>Osteopathie</strong> und <strong>systemisches Coaching</strong> mitten in der Lüneburger Altstadt — mit Zeit, Ruhe und einem Plan, der zu Ihrem Leben passt.</p>
       <div class="hero-ctas">
-        <a href="#kontakt" class="btn magnetic">Termin vereinbaren
+        <a href="kontakt.html" class="btn magnetic">Termin vereinbaren
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
         <a href="tel:+494131604812" class="btn ghost magnetic">04131 60 48 12</a>
@@ -397,7 +68,7 @@ footer { background: var(--green); color: rgba(247,243,236,.7); border-top: 1px 
       <div class="gbadge"><span class="stars">★★★★★</span> <span><b>5,0</b> · 63 Google-Rezensionen</span></div>
     </div>
     <div class="hero-visual">
-      <div class="arch"><img src="assets/hero-behandlung.jpg" alt="Craniosacrale Behandlung in der Praxis Elisa Brandt" id="heroImg"></div>
+      <div class="arch"><img src="assets/hero-behandlung.jpg" alt="Craniosacrale Behandlung in der Praxis Elisa Brandt" data-plx="-13"></div>
       <div class="hero-card">
         <div class="dot"></div>
         <div><b>Termine innerhalb von 7 Tagen</b><small>auch früh & abends nach Vereinbarung</small></div>
@@ -430,49 +101,45 @@ footer { background: var(--green); color: rgba(247,243,236,.7); border-top: 1px 
   </div>
 </section>
 
-<section class="focus-section" id="schwerpunkte">
-  <div class="wrap focus-head">
-    <div class="sec-head rv" style="margin-bottom:0">
-      <div class="eyebrow">Schwerpunkte</div>
-      <h2>Womit Sie zu mir <em class="it">kommen können</em></h2>
+<section>
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Leistungen</div>
+      <h2>Zwei Wege. <em class="it">Ein Ziel:</em> dass es Ihnen besser geht.</h2>
     </div>
-    <div class="focus-hint rv">Scrollen <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-  </div>
-  <div id="cards-track">
-    <div class="fcard">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 3v18M5 9c2.5 1.5 4.5 1.5 7 0s4.5-1.5 7 0"/></svg></div>
-      <div class="idx">01</div><h3>Klassische Osteopathie</h3>
-      <p>Sanfte manuelle Techniken für Bewegungsapparat, Faszien und innere Organe — bei akuten wie chronischen Beschwerden.</p>
-    </div>
-    <div class="fcard">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="8" r="5"/><path d="M5 21c1.5-3.5 4-5 7-5s5.5 1.5 7 5"/></svg></div>
-      <div class="idx">02</div><h3>Craniosacrale Therapie</h3>
-      <p>Feine Impulse an Schädel, Wirbelsäule und Kreuzbein — tief entspannend bei Migräne, Tinnitus und Erschöpfung.</p>
-    </div>
-    <div class="fcard">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M8 13c0-3 1.5-5 4-5s4 2 4 5M12 3v2M4 13H2m20 0h-2M6 6l1.5 1.5M18 6l-1.5 1.5"/><path d="M5 17h14a3 3 0 01-3 3H8a3 3 0 01-3-3z"/></svg></div>
-      <div class="idx">03</div><h3>Stress- & Burnout-Coaching</h3>
-      <p>Systemisches Einzelcoaching, wenn Körper und Kopf nicht mehr zur Ruhe kommen — strukturiert, vertraulich, wirksam.</p>
-    </div>
-    <div class="fcard">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 21s-7-4.5-9-9c-1.2-2.8.5-6 3.5-6 2 0 3.5 1.2 4.5 3 1-1.8 2.5-3 4.5-3 3 0 4.7 3.2 3.5 6-2 4.5-9 9-9 9z"/></svg></div>
-      <div class="idx">04</div><h3>Rücken, Nacken & Gelenke</h3>
-      <p>Vom Hexenschuss bis zur Schulterblockade: gezielte Behandlung plus Übungen für einen belastbaren Alltag.</p>
-    </div>
-    <div class="fcard">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div>
-      <div class="idx">05</div><h3>Kiefergelenk & CMD</h3>
-      <p>Zähneknirschen, Kieferspannung, Kopfschmerz: interdisziplinäre Behandlung, auf Wunsch in Abstimmung mit Ihrer Zahnarztpraxis.</p>
-    </div>
-    <div class="fcard">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 4c4 0 7 3 7 7 0 5-4 9-7 9s-7-4-7-9c0-4 3-7 7-7z"/><path d="M12 8v4l2.5 2.5"/></svg></div>
-      <div class="idx">06</div><h3>Schwangerschaft & Rückbildung</h3>
-      <p>Sanfte Begleitung vor und nach der Geburt — für Beckenboden, Rücken und einen guten Start als Familie.</p>
+    <div class="lcards">
+      <a href="osteopathie.html" class="lcard rv">
+        <img src="assets/behandlung-hand.jpg" alt="Osteopathische Behandlung">
+        <div class="lcard-body">
+          <div class="tag">Körper</div>
+          <h3>Osteopathie</h3>
+          <p>Sanfte manuelle Behandlung bei Rücken-, Kopf- und Gelenkbeschwerden — von der Anamnese bis zum Übungsplan.</p>
+          <span class="lcard-link">Mehr erfahren <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a href="coaching.html" class="lcard rv">
+        <img src="assets/coaching.jpg" alt="Coaching-Gespräch">
+        <div class="lcard-body">
+          <div class="tag">Kopf</div>
+          <h3>Coaching</h3>
+          <p>Systemisches Einzelcoaching bei Stress, Erschöpfung und Veränderung — strukturiert, vertraulich, wirksam.</p>
+          <span class="lcard-link">Mehr erfahren <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a href="kontakt.html" class="lcard slim rv">
+        <img src="assets/praxisraum.jpg" alt="Praxisräume in der Lüneburger Altstadt">
+        <div class="lcard-body">
+          <div class="tag">Unsicher, was passt?</div>
+          <h3>Kostenfreies Kennenlern-Telefonat</h3>
+          <p>10 Minuten, in denen wir klären, ob und wie ich Ihnen helfen kann — unverbindlich und ehrlich.</p>
+          <span class="lcard-link">Termin sichern <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
-<section id="ueber">
+<section style="padding-top: 0">
   <div class="wrap about-grid">
     <div class="about-img">
       <img src="assets/portrait-elisa.jpg" alt="Elisa Brandt, Heilpraktikerin und systemischer Coach">
@@ -481,82 +148,20 @@ footer { background: var(--green); color: rgba(247,243,236,.7); border-top: 1px 
     <div class="about-body">
       <div class="eyebrow rv">Über mich</div>
       <h2 class="rv">Elisa Brandt — <em class="it">Zuhören</em> ist die halbe Behandlung.</h2>
-      <p class="rv">Seit über 14 Jahren begleite ich Menschen, deren Körper Signale sendet, die im Alltag zu lange überhört wurden. Nach meiner Ausbildung zur Heilpraktikerin und fünf Jahren osteopathischer Ausbildung habe ich gelernt: Die besten Ergebnisse entstehen, wenn Behandlung und Lebenssituation zusammen gedacht werden.</p>
-      <p class="rv">Deshalb verbinde ich in meiner Praxis Osteopathie mit systemischem Coaching — denn ein verspannter Nacken hat oft mehr mit dem Terminkalender zu tun als mit der Matratze.</p>
+      <p class="rv">Seit über 14 Jahren begleite ich Menschen, deren Körper Signale sendet, die im Alltag zu lange überhört wurden. In meiner Praxis verbinde ich Osteopathie mit systemischem Coaching — denn ein verspannter Nacken hat oft mehr mit dem Terminkalender zu tun als mit der Matratze.</p>
       <ul class="quals rv">
         <li>Heilpraktikerin (amtsärztliche Überprüfung)</li>
         <li>5-jährige osteopathische Ausbildung (BAO-zertifiziert, 1.350 Std.)</li>
         <li>Systemischer Coach (IHK)</li>
-        <li>Fortbildungen: Craniosacrale Therapie, Kinderosteopathie, CMD</li>
       </ul>
-      <div class="sig rv">Elisa Brandt</div>
+      <a href="ueber-mich.html" class="btn ghost magnetic rv">Mehr über mich
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="steps-section" id="ablauf">
-  <div class="wrap steps-grid">
-    <div>
-      <div class="eyebrow rv">So läuft es ab</div>
-      <h2 class="rv" style="font-size:clamp(32px,4vw,50px); margin-bottom:18px">Drei Schritte zu <em class="it" style="color:var(--sage-soft)">mehr Leichtigkeit</em></h2>
-      <div class="steps">
-        <div class="step rv"><div class="n">01</div><div><h3>Erstgespräch & Anamnese</h3><p>90 Minuten nur für Sie: Wir klären Beschwerden, Vorgeschichte und Ziele — gründlich und ohne Zeitdruck.</p></div></div>
-        <div class="step rv"><div class="n">02</div><div><h3>Behandlung & Plan</h3><p>Osteopathische Behandlung plus ein klarer Fahrplan: Wie viele Termine, welche Übungen, was Sie selbst tun können.</p></div></div>
-        <div class="step rv"><div class="n">03</div><div><h3>Begleitung & Prävention</h3><p>Folgetermine nach Bedarf, auf Wunsch ergänzt um Coaching — damit die Beschwerden nicht wiederkommen.</p></div></div>
-      </div>
-    </div>
-    <div class="steps-img rv"><img src="assets/anamnese.jpg" alt="Anamnesegespräch in der Praxis" id="stepsImg"></div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="eyebrow">Die Praxis</div>
-      <h2>Ein Ort zum <em class="it">Durchatmen</em></h2>
-      <p>Helle Räume in der Lüneburger Altstadt — barrierearm im Erdgeschoss, drei Gehminuten vom Marktplatz.</p>
-    </div>
-    <div class="gallery-grid">
-      <div class="g-item tall rv"><img src="assets/behandlung-hand.jpg" alt="Osteopathische Behandlung"></div>
-      <div class="g-item rv"><img src="assets/praxisraum.jpg" alt="Wartebereich der Praxis"></div>
-      <div class="g-item rv"><img src="assets/aroma-detail.jpg" alt="Details aus dem Behandlungsraum"></div>
-      <div class="g-item rv"><img src="assets/coaching.jpg" alt="Coaching-Gespräch"></div>
-      <div class="g-item rv"><img src="assets/nackenschmerz.jpg" alt="Befundaufnahme bei Nackenbeschwerden"></div>
-    </div>
-  </div>
-</section>
-
-<section class="price-section" id="preise">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="eyebrow">Preise</div>
-      <h2>Transparent. <em class="it">Ohne Überraschungen.</em></h2>
-    </div>
-    <div class="price-grid">
-      <div class="pcard rv">
-        <h3>Erstbehandlung</h3><div class="dur">ca. 90 Minuten</div>
-        <div class="price">139 <small>€</small></div>
-        <p>Ausführliche Anamnese, osteopathischer Befund, erste Behandlung und Ihr persönlicher Behandlungsplan.</p>
-        <a href="#kontakt" class="btn ghost magnetic">Termin anfragen</a>
-      </div>
-      <div class="pcard rv">
-        <h3>Folgebehandlung</h3><div class="dur">ca. 50 Minuten</div>
-        <div class="price">95 <small>€</small></div>
-        <p>Osteopathische Behandlung auf Basis Ihres Plans — inklusive Übungen und Empfehlungen für zu Hause.</p>
-        <a href="#kontakt" class="btn ghost magnetic">Termin anfragen</a>
-      </div>
-      <div class="pcard rv">
-        <h3>Coaching-Session</h3><div class="dur">ca. 90 Minuten</div>
-        <div class="price">120 <small>€</small></div>
-        <p>Systemisches Einzelcoaching bei Stress, Erschöpfung oder Veränderungsphasen. Auch als 3er-Paket (330 €).</p>
-        <a href="#kontakt" class="btn ghost magnetic">Termin anfragen</a>
-      </div>
-    </div>
-    <p class="kasse-note rv"><b>Gut zu wissen:</b> Viele gesetzliche Krankenkassen bezuschussen osteopathische Behandlungen — private Kassen und Zusatzversicherungen erstatten häufig vollständig. Sie erhalten selbstverständlich eine erstattungsfähige Rechnung.</p>
-  </div>
-</section>
-
-<section>
+<section style="padding-top: 0">
   <div class="wrap">
     <div class="sec-head rv">
       <div class="eyebrow">Stimmen aus der Praxis</div>
@@ -586,293 +191,57 @@ footer { background: var(--green); color: rgba(247,243,236,.7); border-top: 1px 
   </div>
 </section>
 
-<section style="padding-top:0">
+<section class="cta-band">
   <div class="wrap">
-    <div class="sec-head rv">
-      <div class="eyebrow">Häufige Fragen</div>
-      <h2>Bevor Sie <em class="it">kommen</em></h2>
-    </div>
-    <div class="faq-wrap">
-      <details class="faq rv">
-        <summary>Übernimmt meine Krankenkasse die Kosten? <span class="pl">+</span></summary>
-        <div class="faq-body">Viele gesetzliche Krankenkassen (z. B. Techniker, Barmer, AOK-Varianten) bezuschussen osteopathische Behandlungen mit 40–60 € pro Sitzung, meist für 3–6 Termine pro Jahr. Private Kassen und Zusatzversicherungen erstatten häufig vollständig. Fragen Sie kurz bei Ihrer Kasse nach — Sie erhalten von mir eine erstattungsfähige Rechnung.</div>
-      </details>
-      <details class="faq rv">
-        <summary>Wie viele Termine brauche ich? <span class="pl">+</span></summary>
-        <div class="faq-body">Das ist ehrlich gesagt individuell. Akute Beschwerden bessern sich oft schon nach 1–3 Terminen, chronische Themen brauchen meist 4–6 Behandlungen im Abstand von 2–4 Wochen. Nach der Erstbehandlung bekommen Sie eine realistische Einschätzung — ich behandle so lange wie nötig und so kurz wie möglich.</div>
-      </details>
-      <details class="faq rv">
-        <summary>Was sollte ich anziehen / mitbringen? <span class="pl">+</span></summary>
-        <div class="faq-body">Bequeme Kleidung genügt. Falls vorhanden, bringen Sie aktuelle Befunde, Arztbriefe oder Bilder (MRT, Röntgen) mit. Handtücher und alles Weitere liegen in der Praxis bereit.</div>
-      </details>
-      <details class="faq rv">
-        <summary>Was ist der Unterschied zwischen Osteopathie und Coaching — und brauche ich beides? <span class="pl">+</span></summary>
-        <div class="faq-body">Osteopathie arbeitet am Körper, Coaching an Mustern und Belastungen, die Beschwerden oft mitverursachen. Die meisten Patient:innen kommen rein osteopathisch — wenn ich im Verlauf merke, dass Stress ein Treiber ist, spreche ich das offen an. Ob Sie das Angebot nutzen, bleibt immer Ihre Entscheidung.</div>
-      </details>
+    <h2 class="rv">Der erste Schritt ist <em class="it" style="color:var(--sage-soft)">ein kurzes Hallo.</em></h2>
+    <p class="rv">Termine meist innerhalb von 7 Tagen — auch früh morgens und abends nach Vereinbarung.</p>
+    <div class="hero-ctas rv">
+      <a href="kontakt.html" class="btn light magnetic">Termin vereinbaren
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="tel:+494131604812" class="btn ghost magnetic">04131 60 48 12</a>
     </div>
   </div>
 </section>
-
-<section class="contact-section" id="kontakt">
-  <div class="wrap">
-    <div class="contact-grid">
-      <div>
-        <div class="eyebrow rv">Kontakt & Termine</div>
-        <h2 class="rv">Der erste Schritt ist <em class="it" style="color:var(--sage-soft)">ein kurzes Hallo.</em></h2>
-        <div class="cinfo">
-          <div class="ci rv">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 21s-7-4.7-7-11a7 7 0 1114 0c0 6.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
-            <div><b>Praxis</b><span>Auf dem Meere 12 · 21335 Lüneburg</span></div>
-          </div>
-          <div class="ci rv">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
-            <div><b>Telefon</b><a href="tel:+494131604812">04131 60 48 12</a></div>
-          </div>
-          <div class="ci rv">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            <div><b>E-Mail</b><a href="mailto:praxis@brandt-osteopathie.de">praxis@brandt-osteopathie.de</a></div>
-          </div>
-          <div class="ci rv">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
-            <div><b>Öffnungszeiten</b>
-              <div class="hours">
-                <div><span>Mo – Do</span><span>08:00 – 18:00</span></div>
-                <div><span>Freitag</span><span>08:00 – 14:00</span></div>
-                <div><span>Sa / So</span><span>nach Vereinbarung</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <form action="https://formspree.io/f/mlgpooqw" method="POST" class="rv">
-        <div class="frow">
-          <label>Name<input type="text" name="name" placeholder="Ihr Name" required></label>
-          <label>Telefon<input type="tel" name="telefon" placeholder="Für die Terminabsprache"></label>
-        </div>
-        <label>E-Mail<input type="email" name="email" placeholder="ihre@email.de" required></label>
-        <label>Ihr Anliegen
-          <select name="anliegen">
-            <option>Osteopathie — Erstbehandlung</option>
-            <option>Osteopathie — Folgetermin</option>
-            <option>Coaching</option>
-            <option>Ich bin mir noch unsicher</option>
-          </select>
-        </label>
-        <label>Nachricht<textarea name="nachricht" placeholder="Kurz: Worum geht es, und wann erreichen wir Sie am besten?"></textarea></label>
-        <button type="submit" class="btn magnetic">Anfrage senden
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </button>
-        <p class="privacy-hint">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß <a href="#" data-drawer="datenschutz">Datenschutzerklärung</a> zu. Ihre Daten werden ausschließlich zur Terminvereinbarung genutzt.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<div class="map-section">
-  <iframe title="Anfahrt Praxis Elisa Brandt Lüneburg" src="https://www.google.com/maps?q=Auf%20dem%20Meere%2012%2C%2021335%20L%C3%BCneburg&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
 
 <footer>
-  <div class="wrap foot-inner">
-    <div>© <span id="year"></span> Praxis Elisa Brandt — Osteopathie & Coaching, Lüneburg</div>
-    <div class="foot-links">
-      <button data-drawer="impressum">Impressum</button>
-      <button data-drawer="datenschutz">Datenschutz</button>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand"><strong>Elisa Brandt</strong> <span class="sub">Osteopathie · Coaching</span></div>
+        <p>Ganzheitliche Osteopathie und systemisches Coaching in der Lüneburger Altstadt — mit Zeit, Ruhe und einem klaren Plan.</p>
+      </div>
+      <div>
+        <h4>Praxis</h4>
+        <ul>
+          <li><a href="osteopathie.html">Osteopathie</a></li>
+          <li><a href="coaching.html">Coaching</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="preise.html">Preise</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>Auf dem Meere 12 · 21335 Lüneburg</li>
+          <li><a href="tel:+494131604812">04131 60 48 12</a></li>
+          <li><a href="mailto:praxis@brandt-osteopathie.de">praxis@brandt-osteopathie.de</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="foot-credit">Konzept, Design & Umsetzung: <a href="https://www.valoris-auftragsstruktur.de" target="_blank" rel="noopener">VALORIS Webdesign & SEO</a></div>
+    <div class="foot-inner">
+      <div>© <span class="year"></span> Praxis Elisa Brandt, Lüneburg</div>
+      <div class="foot-links">
+        <button data-drawer="impressum">Impressum</button>
+        <button data-drawer="datenschutz">Datenschutz</button>
+      </div>
+      <div class="foot-credit">Konzept, Design & Umsetzung: <a href="https://www.valoris-auftragsstruktur.de" target="_blank" rel="noopener">VALORIS Webdesign & SEO</a></div>
+    </div>
   </div>
 </footer>
 
-<!-- Fixed Elements — immer am Ende von body -->
-<a class="wa-fab" href="https://wa.me/4915254190819" target="_blank" rel="noopener" aria-label="WhatsApp Kontakt">
-  <svg width="30" height="30" viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.6.8 5 2.3 7L4 29l7.2-2.2c1.9 1 4 1.6 6.3 1.6h.5c6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 17c-.3.8-1.6 1.5-2.3 1.6-.6.1-1.3.2-3.8-.8-3.2-1.3-5.2-4.5-5.4-4.7-.2-.2-1.3-1.7-1.3-3.3s.8-2.3 1.1-2.6c.3-.3.6-.4.9-.4h.6c.2 0 .5-.1.7.5l1 2.4c.1.2.1.4 0 .6l-.4.7-.5.6c-.2.2-.4.4-.2.7.2.4 1 1.6 2.1 2.6 1.5 1.3 2.7 1.7 3 1.9.4.2.6.2.8-.1l1.2-1.4c.3-.3.5-.3.8-.2l2.5 1.2c.4.2.6.3.7.5.1.1.1.8-.2 1.6z"/></svg>
-</a>
-
-<div class="cookie" id="cookie">
-  Diese Website nutzt technisch notwendige Cookies sowie Google Maps zur Anfahrtsdarstellung. Details in der <a href="#" data-drawer="datenschutz" style="text-decoration:underline">Datenschutzerklärung</a>.
-  <button id="cookieOk">Verstanden</button>
-</div>
-
-<div class="drawer-overlay" id="drawerOverlay"></div>
-<aside class="drawer" id="drawerImpressum">
-  <button class="drawer-close" data-close>×</button>
-  <h2>Impressum</h2>
-  <p><strong>Angaben gemäß § 5 TMG</strong></p>
-  <p>Praxis Elisa Brandt — Osteopathie & Coaching<br>Elisa Brandt, Heilpraktikerin<br>Auf dem Meere 12<br>21335 Lüneburg</p>
-  <h3>Kontakt</h3>
-  <p>Telefon: 04131 60 48 12<br>E-Mail: praxis@brandt-osteopathie.de</p>
-  <h3>Berufsbezeichnung</h3>
-  <p>Heilpraktikerin (verliehen in der Bundesrepublik Deutschland). Erlaubnis zur Ausübung der Heilkunde ohne Bestallung nach dem Heilpraktikergesetz (HeilprG), erteilt durch das Gesundheitsamt Lüneburg. Zuständige Aufsichtsbehörde: Gesundheitsamt Landkreis Lüneburg.</p>
-  <h3>Berufsrechtliche Regelungen</h3>
-  <p>Heilpraktikergesetz (HeilprG) sowie die Durchführungsverordnung, einsehbar unter www.gesetze-im-internet.de.</p>
-  <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
-  <p>Elisa Brandt, Anschrift wie oben.</p>
-  <h3>Hinweis</h3>
-  <p>Osteopathie und Coaching ersetzen keine ärztliche Diagnose oder Behandlung. Bei akuten Krankheitsbildern wenden Sie sich bitte zusätzlich an Ihre Ärztin oder Ihren Arzt.</p>
-</aside>
-<aside class="drawer" id="drawerDatenschutz">
-  <button class="drawer-close" data-close>×</button>
-  <h2>Datenschutzerklärung</h2>
-  <h3>1. Verantwortliche Stelle</h3>
-  <p>Elisa Brandt, Auf dem Meere 12, 21335 Lüneburg, praxis@brandt-osteopathie.de</p>
-  <h3>2. Erhebung und Verarbeitung von Daten</h3>
-  <p>Beim Besuch dieser Website werden durch den Hosting-Anbieter automatisch technische Zugriffsdaten (Server-Logfiles) verarbeitet — Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren Bereitstellung der Website).</p>
-  <h3>3. Kontaktformular</h3>
-  <p>Wenn Sie das Kontaktformular nutzen, werden Ihre Angaben (Name, E-Mail, Telefon, Nachricht) über den Dienst Formspree Inc. übertragen und ausschließlich zur Bearbeitung Ihrer Anfrage verarbeitet (Art. 6 Abs. 1 lit. b DSGVO). Eine Weitergabe an Dritte erfolgt nicht.</p>
-  <h3>4. Google Maps</h3>
-  <p>Zur Anfahrtsdarstellung binden wir Google Maps (Google Ireland Ltd.) ein. Dabei kann Ihre IP-Adresse an Google übertragen werden (Art. 6 Abs. 1 lit. f DSGVO). Details: policies.google.com/privacy.</p>
-  <h3>5. Ihre Rechte</h3>
-  <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch (Art. 15–21 DSGVO). Beschwerden richten Sie an die Landesbeauftragte für den Datenschutz Niedersachsen.</p>
-  <h3>6. Speicherdauer</h3>
-  <p>Anfragedaten werden gelöscht, sobald sie für die Bearbeitung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten bestehen. Behandlungsdokumentation unterliegt der 10-jährigen Aufbewahrungspflicht.</p>
-</aside>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script>
-gsap.registerPlugin(ScrollTrigger);
-
-/* Footer-Jahr */
-document.getElementById('year').textContent = new Date().getFullYear();
-
-/* Hero Word-Split */
-function splitWords(selector) {
-  document.querySelectorAll(selector).forEach(el => {
-    el.innerHTML = el.textContent.split(' ').map(w =>
-      `<span style="display:inline-block;overflow:hidden;vertical-align:top"><span class="wd" style="display:inline-block">${w}</span></span>`
-    ).join(' ');
-  });
-}
-splitWords('.hero h1 .wline');
-gsap.from('.hero h1 .wd', { y: '105%', stagger: 0.07, duration: 1, ease: 'power4.out', delay: 0.15 });
-gsap.from('.hero-sub, .hero-ctas, .gbadge, .hero .eyebrow', { opacity: 0, y: 26, stagger: 0.1, duration: 0.9, ease: 'power3.out', delay: 0.5 });
-gsap.from('.hero-visual', { opacity: 0, y: 50, duration: 1.2, ease: 'power3.out', delay: 0.35 });
-gsap.from('.hero-card', { opacity: 0, x: -30, duration: 0.9, ease: 'power3.out', delay: 1.1 });
-
-/* Scroll Reveals */
-gsap.utils.toArray('.rv').forEach(el => {
-  gsap.to(el, {
-    opacity: 1, y: 0, duration: 1, ease: 'power3.out',
-    scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
-  });
-});
-
-/* Hero Parallax */
-gsap.to('#heroImg', {
-  yPercent: -13, ease: 'none',
-  scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
-});
-gsap.to('.hero-bgword', {
-  yPercent: -30, ease: 'none',
-  scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
-});
-gsap.to('#stepsImg', {
-  yPercent: -11, ease: 'none',
-  scrollTrigger: { trigger: '.steps-section', start: 'top bottom', end: 'bottom top', scrub: 1 }
-});
-
-/* Image Curtain Reveal (Über mich) */
-gsap.to('.img-cover', {
-  scaleX: 0, transformOrigin: 'right',
-  duration: 1.3, ease: 'power4.inOut',
-  scrollTrigger: { trigger: '#ueber', start: 'top 62%' }
-});
-
-/* Counter */
-document.querySelectorAll('.counter').forEach(el => {
-  const target = parseInt(el.dataset.target);
-  const obj = { v: 0 };
-  gsap.to(obj, {
-    v: target, duration: 2.2, ease: 'power2.out',
-    scrollTrigger: { trigger: el, start: 'top 85%' },
-    onUpdate() { el.textContent = Math.round(obj.v).toLocaleString('de-DE'); }
-  });
-});
-
-/* Marquee */
-(function () {
-  const el = document.getElementById('marquee');
-  el.innerHTML += el.innerHTML + el.innerHTML;
-  const w = el.scrollWidth / 3;
-  gsap.to(el, { x: -w, duration: 26, ease: 'none', repeat: -1 });
-})();
-
-/* Nav hide on scroll */
-let lastY = 0;
-ScrollTrigger.create({
-  onUpdate: self => {
-    const y = self.scroll();
-    gsap.to('#nav', { y: y > lastY && y > 140 ? -90 : 0, duration: 0.4, ease: 'power2.out' });
-    lastY = y;
-  }
-});
-
-/* Desktop only: horizontaler Scroll + Magnetic Buttons */
-gsap.matchMedia().add('(min-width: 981px)', () => {
-  const track = document.getElementById('cards-track');
-  gsap.to(track, {
-    x: () => -(track.scrollWidth - window.innerWidth) - 48,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.focus-section',
-      start: 'top top',
-      end: () => '+=' + (track.scrollWidth - window.innerWidth + 48),
-      scrub: 1,
-      pin: true,
-      anticipatePin: 1,
-      invalidateOnRefresh: true
-    }
-  });
-
-  document.querySelectorAll('.magnetic').forEach(btn => {
-    btn.addEventListener('mousemove', e => {
-      const r = btn.getBoundingClientRect();
-      gsap.to(btn, { x: (e.clientX - r.left - r.width / 2) * 0.18, y: (e.clientY - r.top - r.height / 2) * 0.18, duration: 0.35, ease: 'power2.out' });
-    });
-    btn.addEventListener('mouseleave', () => {
-      gsap.to(btn, { x: 0, y: 0, duration: 0.65, ease: 'elastic.out(1, 0.4)' });
-    });
-  });
-});
-
-/* Mobile Menü */
-const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobileMenu');
-burger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
-
-/* Smooth Anchor Scroll */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const id = a.getAttribute('href');
-    if (id.length > 1 && document.querySelector(id)) {
-      e.preventDefault();
-      const target = document.querySelector(id);
-      gsap.to(window, { scrollTo: 0, duration: 0 }); /* fallback noop */
-      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
-    }
-  });
-});
-
-/* Cookie Banner */
-const cookie = document.getElementById('cookie');
-if (!localStorage.getItem('cookieOk')) cookie.classList.add('show');
-document.getElementById('cookieOk').addEventListener('click', () => {
-  localStorage.setItem('cookieOk', '1');
-  cookie.classList.remove('show');
-});
-
-/* Drawer (Impressum / Datenschutz) */
-const overlay = document.getElementById('drawerOverlay');
-const drawers = { impressum: document.getElementById('drawerImpressum'), datenschutz: document.getElementById('drawerDatenschutz') };
-function openDrawer(name) { overlay.classList.add('open'); drawers[name].classList.add('open'); document.body.style.overflow = 'hidden'; }
-function closeDrawers() { overlay.classList.remove('open'); Object.values(drawers).forEach(d => d.classList.remove('open')); document.body.style.overflow = ''; }
-document.querySelectorAll('[data-drawer]').forEach(el => el.addEventListener('click', e => { e.preventDefault(); openDrawer(el.dataset.drawer); }));
-document.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeDrawers));
-overlay.addEventListener('click', closeDrawers);
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawers(); });
-
-window.addEventListener('load', () => ScrollTrigger.refresh());
-</script>
+<script src="assets/site.js"></script>
 </body>
 </html>
