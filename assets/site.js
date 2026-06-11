@@ -47,6 +47,11 @@ document.body.insertAdjacentHTML('beforeend', `
 /* ---------- Footer-Jahr ---------- */
 document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
 
+/* ---------- Motion-Guard: bei reduced motion bleibt alles statisch sichtbar ---------- */
+const motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (motionOK) {
+
 /* ---------- Hero Word-Split (Start + Unterseiten) ---------- */
 function splitWords(selector) {
   document.querySelectorAll(selector).forEach(el => {
@@ -69,8 +74,9 @@ if (document.querySelector('.page-hero')) {
   gsap.from('.page-hero .arch-sm', { opacity: 0, y: 44, duration: 1.1, ease: 'power3.out', delay: 0.3 });
 }
 
-/* ---------- Scroll Reveals ---------- */
+/* ---------- Scroll Reveals (Initialzustand per JS, damit Inhalt ohne JS sichtbar bleibt) ---------- */
 gsap.utils.toArray('.rv').forEach(el => {
+  gsap.set(el, { opacity: 0, y: 48 });
   gsap.to(el, {
     opacity: 1, y: 0, duration: 1, ease: 'power3.out',
     scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
@@ -108,6 +114,7 @@ document.querySelectorAll('.counter').forEach(el => {
 /* ---------- Marquee ---------- */
 const marquee = document.getElementById('marquee');
 if (marquee) {
+  marquee.setAttribute('aria-hidden', 'true');
   marquee.innerHTML += marquee.innerHTML + marquee.innerHTML;
   gsap.to(marquee, { x: -marquee.scrollWidth / 3, duration: 26, ease: 'none', repeat: -1 });
 }
@@ -122,8 +129,16 @@ ScrollTrigger.create({
   }
 });
 
+} else {
+  /* Reduced motion: Curtain-Cover entfernen, Counter sofort final */
+  document.querySelectorAll('.img-cover').forEach(el => el.remove());
+  document.querySelectorAll('.counter').forEach(el => {
+    el.textContent = parseInt(el.dataset.target).toLocaleString('de-DE');
+  });
+}
+
 /* ---------- Desktop: horizontaler Scroll + Magnetic ---------- */
-gsap.matchMedia().add('(min-width: 981px)', () => {
+if (motionOK) gsap.matchMedia().add('(min-width: 981px)', () => {
   const track = document.getElementById('cards-track');
   if (track) {
     gsap.to(track, {
