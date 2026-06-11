@@ -76,7 +76,7 @@ if (document.querySelector('.page-hero')) {
 
 /* ---------- Scroll Reveals (Initialzustand per JS, damit Inhalt ohne JS sichtbar bleibt) ---------- */
 gsap.utils.toArray('.rv').forEach(el => {
-  gsap.set(el, { opacity: 0, y: 48 });
+  gsap.set(el, { opacity: 0, y: 26 });
   gsap.to(el, {
     opacity: 1, y: 0, duration: 1, ease: 'power3.out',
     scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
@@ -89,6 +89,11 @@ gsap.utils.toArray('[data-plx]').forEach(img => {
     yPercent: parseFloat(img.dataset.plx) || -12, ease: 'none',
     scrollTrigger: { trigger: img.closest('section, header, .steps-section') || img, start: 'top bottom', end: 'bottom top', scrub: true }
   });
+});
+
+/* ---------- Ken Burns (langsamer Zoom auf Hero-Bildern) ---------- */
+gsap.utils.toArray('[data-kb]').forEach(img => {
+  gsap.to(img, { scale: 1.07, duration: 17, ease: 'sine.inOut', yoyo: true, repeat: -1 });
 });
 
 /* ---------- Image Curtain Reveal ---------- */
